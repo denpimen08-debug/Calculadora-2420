@@ -30,3 +30,7 @@ def raiz_cuadrada(numero):
     if numero < 0:
         return "No se puede calcular la raiz cuadrada de un numero negativo."
     return numero ** 0.5
+
+
+def porcentaje(cantidad, porciento):
+    return cantidad * porciento / 100
