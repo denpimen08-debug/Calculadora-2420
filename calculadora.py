@@ -7,6 +7,7 @@ def mostrar_menu():
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
+    print("5. Potencia")
 
 
 def main():
@@ -23,6 +24,8 @@ def main():
         print("Resultado:", operaciones.multiplicacion(a, b))
     elif opcion == "4":
         print("Resultado:", operaciones.division(a, b))
+    elif opcion == "5":
+        print("Resultado:", operaciones.potencia(a, b))
     else:
         print("Opción no válida.")
 
