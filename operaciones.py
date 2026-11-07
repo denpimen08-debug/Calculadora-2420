@@ -34,3 +34,7 @@ def raiz_cuadrada(numero):
 
 def porcentaje(cantidad, porciento):
     return cantidad * porciento / 100
+
+
+def valor_absoluto(numero):
+    return abs(numero)
