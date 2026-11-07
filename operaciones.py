@@ -1,3 +1,6 @@
+import math
+
+
 def suma(a, b):
     return a + b
 
@@ -38,3 +41,9 @@ def porcentaje(cantidad, porciento):
 
 def valor_absoluto(numero):
     return abs(numero)
+
+
+def factorial(numero):
+    if numero < 0 or int(numero) != numero:
+        return "El factorial solo se calcula para enteros no negativos."
+    return math.factorial(int(numero))
