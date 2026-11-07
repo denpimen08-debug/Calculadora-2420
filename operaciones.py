@@ -18,3 +18,9 @@ def division(a, b):
 
 def potencia(base, exponente):
     return base ** exponente
+
+
+def modulo(dividendo, divisor):
+    if divisor == 0:
+        return "No se puede calcular el modulo con divisor cero."
+    return dividendo % divisor
