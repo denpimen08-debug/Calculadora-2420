@@ -24,3 +24,9 @@ def modulo(dividendo, divisor):
     if divisor == 0:
         return "No se puede calcular el modulo con divisor cero."
     return dividendo % divisor
+
+
+def raiz_cuadrada(numero):
+    if numero < 0:
+        return "No se puede calcular la raiz cuadrada de un numero negativo."
+    return numero ** 0.5
