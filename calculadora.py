@@ -9,6 +9,7 @@ def mostrar_menu():
     print("4. División")
     print("5. Potencia")
     print("6. Módulo")
+    print("7. Raíz cuadrada")
 
 
 def main():
@@ -29,6 +30,8 @@ def main():
         print("Resultado:", operaciones.potencia(a, b))
     elif opcion == "6":
         print("Resultado:", operaciones.modulo(a, b))
+    elif opcion == "7":
+        print("Resultado:", operaciones.raiz_cuadrada(a))
     else:
         print("Opción no válida.")
 
