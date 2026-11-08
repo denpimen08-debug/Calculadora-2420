@@ -18,6 +18,7 @@ def mostrar_menu():
     print("11. Promedio")
     print("12. Redondeo")
     print("13. Ver historial")
+    print("14. Limpiar historial")
     print("0. Salir")
 
 
@@ -51,6 +52,11 @@ def main():
 
         if opcion == "13":
             ver_historial(historial)
+            continue
+
+        if opcion == "14":
+            historial.clear()
+            print("Historial limpiado.")
             continue
 
         if opcion not in [str(numero) for numero in range(1, 13)]:
