@@ -17,11 +17,19 @@ def mostrar_menu():
     print("12. Redondeo")
 
 
+def leer_numero(mensaje):
+    while True:
+        try:
+            return float(input(mensaje))
+        except ValueError:
+            print("Entrada no válida. Ingrese un número.")
+
+
 def main():
     mostrar_menu()
     opcion = input("Seleccione una opción: ")
-    a = float(input("Primer número: "))
-    b = float(input("Segundo número: "))
+    a = leer_numero("Primer número: ")
+    b = leer_numero("Segundo número: ")
 
     if opcion == "1":
         print("Resultado:", operaciones.suma(a, b))
