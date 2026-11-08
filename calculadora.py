@@ -17,6 +17,7 @@ def mostrar_menu():
     print("10. Factorial")
     print("11. Promedio")
     print("12. Redondeo")
+    print("13. Ver historial")
     print("0. Salir")
 
 
@@ -28,7 +29,17 @@ def leer_numero(mensaje):
             print("Entrada no valida. Ingrese un numero.")
 
 
+def ver_historial(historial):
+    if not historial:
+        print("El historial esta vacio.")
+        return
+    print("\n--- Historial de operaciones ---")
+    for indice, operacion in enumerate(historial, start=1):
+        print(f"{indice}. {operacion}")
+
+
 def main():
+    historial = []
     print("Bienvenido a la calculadora.")
     while True:
         mostrar_menu()
@@ -37,6 +48,10 @@ def main():
         if opcion == "0":
             print("Hasta luego.")
             break
+
+        if opcion == "13":
+            ver_historial(historial)
+            continue
 
         if opcion not in [str(numero) for numero in range(1, 13)]:
             print("Opcion no valida.")
@@ -47,29 +62,43 @@ def main():
 
         try:
             if opcion == "1":
-                print("Resultado:", operaciones.suma(a, b))
+                resultado = operaciones.suma(a, b)
+                descripcion = f"{a} + {b}"
             elif opcion == "2":
-                print("Resultado:", operaciones.resta(a, b))
+                resultado = operaciones.resta(a, b)
+                descripcion = f"{a} - {b}"
             elif opcion == "3":
-                print("Resultado:", operaciones.multiplicacion(a, b))
+                resultado = operaciones.multiplicacion(a, b)
+                descripcion = f"{a} * {b}"
             elif opcion == "4":
-                print("Resultado:", operaciones.division(a, b))
+                resultado = operaciones.division(a, b)
+                descripcion = f"{a} / {b}"
             elif opcion == "5":
-                print("Resultado:", operaciones.potencia(a, b))
+                resultado = operaciones.potencia(a, b)
+                descripcion = f"{a} ^ {b}"
             elif opcion == "6":
-                print("Resultado:", operaciones.modulo(a, b))
+                resultado = operaciones.modulo(a, b)
+                descripcion = f"{a} % {b}"
             elif opcion == "7":
-                print("Resultado:", operaciones.raiz_cuadrada(a))
+                resultado = operaciones.raiz_cuadrada(a)
+                descripcion = f"raiz({a})"
             elif opcion == "8":
-                print("Resultado:", operaciones.porcentaje(a, b))
+                resultado = operaciones.porcentaje(a, b)
+                descripcion = f"{b}% de {a}"
             elif opcion == "9":
-                print("Resultado:", operaciones.valor_absoluto(a))
+                resultado = operaciones.valor_absoluto(a)
+                descripcion = f"|{a}|"
             elif opcion == "10":
-                print("Resultado:", operaciones.factorial(a))
+                resultado = operaciones.factorial(a)
+                descripcion = f"{a}!"
             elif opcion == "11":
-                print("Resultado:", operaciones.promedio([a, b]))
+                resultado = operaciones.promedio([a, b])
+                descripcion = f"promedio({a}, {b})"
             elif opcion == "12":
-                print("Resultado:", operaciones.redondear(a, b))
+                resultado = operaciones.redondear(a, b)
+                descripcion = f"redondear({a}, {b})"
+            print("Resultado:", resultado)
+            historial.append(f"{descripcion} = {resultado}")
         except ZeroDivisionError as error:
             print(f"Error: {error}")
 
