@@ -13,6 +13,7 @@ def mostrar_menu():
     print("8. Porcentaje")
     print("9. Valor absoluto")
     print("10. Factorial")
+    print("11. Promedio")
 
 
 def main():
@@ -41,6 +42,8 @@ def main():
         print("Resultado:", operaciones.valor_absoluto(a))
     elif opcion == "10":
         print("Resultado:", operaciones.factorial(a))
+    elif opcion == "11":
+        print("Resultado:", operaciones.promedio([a, b]))
     else:
         print("Opción no válida.")
 
