@@ -47,3 +47,9 @@ def factorial(numero):
     if numero < 0 or int(numero) != numero:
         return "El factorial solo se calcula para enteros no negativos."
     return math.factorial(int(numero))
+
+
+def promedio(numeros):
+    if not numeros:
+        return "Se necesita al menos un numero para calcular el promedio."
+    return sum(numeros) / len(numeros)
