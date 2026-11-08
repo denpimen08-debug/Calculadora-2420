@@ -15,7 +15,7 @@ def multiplicacion(a, b):
 
 def division(a, b):
     if b == 0:
-        return "No se puede dividir entre 0."
+        raise ZeroDivisionError("No se puede dividir entre cero.")
     return a / b
 
 
@@ -25,7 +25,7 @@ def potencia(base, exponente):
 
 def modulo(dividendo, divisor):
     if divisor == 0:
-        return "No se puede calcular el modulo con divisor cero."
+        raise ZeroDivisionError("No se puede calcular el modulo con divisor cero.")
     return dividendo % divisor
 
 
