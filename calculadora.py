@@ -31,32 +31,35 @@ def main():
     a = leer_numero("Primer número: ")
     b = leer_numero("Segundo número: ")
 
-    if opcion == "1":
-        print("Resultado:", operaciones.suma(a, b))
-    elif opcion == "2":
-        print("Resultado:", operaciones.resta(a, b))
-    elif opcion == "3":
-        print("Resultado:", operaciones.multiplicacion(a, b))
-    elif opcion == "4":
-        print("Resultado:", operaciones.division(a, b))
-    elif opcion == "5":
-        print("Resultado:", operaciones.potencia(a, b))
-    elif opcion == "6":
-        print("Resultado:", operaciones.modulo(a, b))
-    elif opcion == "7":
-        print("Resultado:", operaciones.raiz_cuadrada(a))
-    elif opcion == "8":
-        print("Resultado:", operaciones.porcentaje(a, b))
-    elif opcion == "9":
-        print("Resultado:", operaciones.valor_absoluto(a))
-    elif opcion == "10":
-        print("Resultado:", operaciones.factorial(a))
-    elif opcion == "11":
-        print("Resultado:", operaciones.promedio([a, b]))
-    elif opcion == "12":
-        print("Resultado:", operaciones.redondear(a, b))
-    else:
-        print("Opción no válida.")
+    try:
+        if opcion == "1":
+            print("Resultado:", operaciones.suma(a, b))
+        elif opcion == "2":
+            print("Resultado:", operaciones.resta(a, b))
+        elif opcion == "3":
+            print("Resultado:", operaciones.multiplicacion(a, b))
+        elif opcion == "4":
+            print("Resultado:", operaciones.division(a, b))
+        elif opcion == "5":
+            print("Resultado:", operaciones.potencia(a, b))
+        elif opcion == "6":
+            print("Resultado:", operaciones.modulo(a, b))
+        elif opcion == "7":
+            print("Resultado:", operaciones.raiz_cuadrada(a))
+        elif opcion == "8":
+            print("Resultado:", operaciones.porcentaje(a, b))
+        elif opcion == "9":
+            print("Resultado:", operaciones.valor_absoluto(a))
+        elif opcion == "10":
+            print("Resultado:", operaciones.factorial(a))
+        elif opcion == "11":
+            print("Resultado:", operaciones.promedio([a, b]))
+        elif opcion == "12":
+            print("Resultado:", operaciones.redondear(a, b))
+        else:
+            print("Opción no válida.")
+    except ZeroDivisionError as error:
+        print(f"Error: {error}")
 
 
 if __name__ == "__main__":
