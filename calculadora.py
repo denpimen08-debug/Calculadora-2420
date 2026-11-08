@@ -3,10 +3,12 @@ import operaciones
 
 def mostrar_menu():
     print("\n===== CALCULADORA =====")
+    print("-- Operaciones básicas --")
     print("1. Suma")
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
+    print("-- Operaciones avanzadas --")
     print("5. Potencia")
     print("6. Módulo")
     print("7. Raíz cuadrada")
@@ -15,6 +17,7 @@ def mostrar_menu():
     print("10. Factorial")
     print("11. Promedio")
     print("12. Redondeo")
+    print("0. Salir")
 
 
 def leer_numero(mensaje):
@@ -28,6 +31,15 @@ def leer_numero(mensaje):
 def main():
     mostrar_menu()
     opcion = input("Seleccione una opción: ")
+
+    if opcion == "0":
+        print("Hasta luego.")
+        return
+
+    if opcion not in [str(numero) for numero in range(1, 13)]:
+        print("Opción no válida.")
+        return
+
     a = leer_numero("Primer número: ")
     b = leer_numero("Segundo número: ")
 
