@@ -53,3 +53,9 @@ def promedio(numeros):
     if not numeros:
         return "Se necesita al menos un numero para calcular el promedio."
     return sum(numeros) / len(numeros)
+
+
+def redondear(numero, decimales):
+    if decimales < 0 or int(decimales) != decimales:
+        return "La cantidad de decimales debe ser un entero no negativo."
+    return round(numero, int(decimales))
